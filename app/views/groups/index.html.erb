@@ -1,5 +1,25 @@
 <%= render "shared/header", title: "CATEGORIES", image: "" %>
 <%= render "shared/sidebar" %>
 <%= render "shared/msg" %>
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+
+<div class="group-wrapper">
+  <% @groups.each do |group|%>
+  <ul class="group-container">
+    <li>
+      <figure>
+        <img src="<%= group.icon %>" alt="icon">
+        <figcaption>
+          <h3><%= group.name %></h3>
+          <small><%= group.created_at.to_date.to_s %></small>
+        </figcaption>
+      </figure>
+      <h4>
+        $400
+      </h4>
+    </li>
+  </ul>
+  <% end %>
+  <%= link_to(new_group_path) do %>
+    New Category
+  <% end %>
+</div>

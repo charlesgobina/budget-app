@@ -58,3 +58,52 @@ nav > form > .leave {
 .notice {
   color: rgb(15, 189, 15);
 }
+
+.alert {
+  color: rgb(255, 34, 34);
+}
+
+.group-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.group-wrapper > .group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.group-container > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-container > li > figure {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.group-container > li > figure > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.group-wrapper > a {
+  padding: 10px;
+  border: none;
+  background-color: antiquewhite;
+  text-align: center;
+  outline: none;
+  width: 100%;
+}
+
+
