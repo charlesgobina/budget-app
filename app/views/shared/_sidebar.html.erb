@@ -1,0 +1,13 @@
+<nav class="top-nav">
+  <button class="take-nav">Take!</button>
+  <figure>
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+    <h4>Charles</h4>
+  </figure>
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Categories</a></li>
+    <li><a href="">Transactions</a></li>
+  </ul>
+  <%= button_to('Leave', destroy_user_session_path, method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "leave") %>
+</nav>
