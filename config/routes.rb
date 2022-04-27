@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'entities/index'
   devise_for :users
   resources :groups
   resources :entities
