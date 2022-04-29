@@ -1,5 +1,11 @@
 <% flash.each do |type, msg| %>
-  <div class="#{type}">
-    <p><%= msg %></p>
-  </div>
+  <% if type == "alert" %>
+    <div class="alert">
+      <p><%= msg %></p>
+    </div>
+  <% else %>
+    <div class="notice">
+      <p><%= msg %></p>
+    </div>
+  <% end %>
 <% end %>

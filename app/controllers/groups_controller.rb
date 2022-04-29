@@ -1,6 +1,13 @@
 class GroupsController < ApplicationController
-  def index;
-    @groups = current_user.groups.all
+  before_action :authenticate_user!
+  load_and_authorize_resource
+  def index
+    @groups = current_user.groups.all.order(created_at: :desc)
+  end
+
+  def show
+    @group = current_user.groups.find(params[:id])
+    @entities = @group.entities.all.where(groupe_id: @group.id)
   end
 
   def new
@@ -19,6 +26,7 @@ class GroupsController < ApplicationController
   end
 
   private
+
   def group_params
     params.require(:group).permit(:name, :icon)
   end

@@ -1,25 +1,33 @@
-<%= render "shared/header", title: "CATEGORIES", image: "" %>
+<%= render "shared/header", fimage: "icon", title: "CATEGORIES", image: "search" %>
 <%= render "shared/sidebar" %>
 <%= render "shared/msg" %>
 
 <div class="group-wrapper">
-  <% @groups.each do |group|%>
-  <ul class="group-container">
-    <li>
-      <figure>
-        <img src="<%= group.icon %>" alt="icon">
-        <figcaption>
-          <h3><%= group.name %></h3>
-          <small><%= group.created_at.to_date.to_s %></small>
-        </figcaption>
-      </figure>
-      <h4>
-        $400
-      </h4>
-    </li>
-  </ul>
+  <% if @groups.empty? %>
+    <p class="no-trans">You have no categories yet</p>
+  <% else %>
+    <% @groups.each do |group|%>
+      <%= link_to(group_path(group)) do %>
+        <ul class="group-container">
+          <li>
+            <figure>
+              <img src="<%= group.icon %>" alt="icon">
+              <figcaption>
+                <h3><%= group.name %></h3>
+                <small><%= group.created_at.to_date.to_s %></small>
+              </figcaption>
+            </figure>
+            <h4 class="group-amount">
+              <%= "$#{Entity.total_amount(group.entities)}" %>
+            </h4>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
   <% end %>
-  <%= link_to(new_group_path) do %>
-    New Category
-  <% end %>
+  <div class="a-link">
+    <%= link_to(new_group_path) do %>
+      <button type="button">New Category</button>
+    <% end %>
+  </div>
 </div>

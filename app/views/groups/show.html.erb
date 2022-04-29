@@ -1,10 +1,12 @@
-<%= render "shared/headercreate", back: "back", title: "TRANSACTIONS", image: "search" %>
-<%= render "shared/sidebar" %>
+<%= render "shared/headercreate", back: "back", title: "ALL TRANSACTIONS", image: "search" %>
 <%= render "shared/msg" %>
 <div class="group-wrapper">
   <% if @entities.empty? %>
-    <p class="no-trans">No transactions yet</p>
+    <p class="no-trans">No transactions for this category yet</p>
   <% else %>
+    <span class="group-amount ent-amount">
+      <%= "Total amount spent $#{@entities.sum(:amount)}" %>
+    </span>
     <% @entities.each do |entity|%>
       <%= link_to(entity_path(entity)) do %>
         <ul class="group-container">
@@ -17,7 +19,7 @@
               </figcaption>
             </figure>
             <h4 class="group-amount">
-              <%= entity.amount %>
+              <%= "$#{entity.amount}" %>
             </h4>
           </li>
         </ul>

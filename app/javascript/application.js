@@ -7,9 +7,9 @@ const navTake = document.querySelector('.take-nav');
 const topNav = document.querySelector('.top-nav');
 
 navBring.addEventListener('click', () => {
-  topNav.classList.toggle('active');
+  topNav.classList.add('active');
 });
 
 navTake.addEventListener('click', () => {
-  topNav.classList.toggle('active');
+  topNav.classList.remove('active');
 });
