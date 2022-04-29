@@ -1,0 +1,25 @@
+<%= render "shared/headershow", back: "back", title: "NEW TRANSACTIONS", image: "search" %>
+<%= render "shared/msg" %>
+
+<div class="group-new">
+  <%= form_with model: @entity, html: {'data-turbo' => "false"}, url: entities_path do |form| %>
+    <div class="form-new-title field">
+      <%= form.label :name %>
+      <%= form.text_field :name, required: true, class: 'new-title texto' %>
+    </div>
+    <div class="form-new-post field">
+      <%= form.label :amount %>
+      <%= form.number_field :amount, class: "texto" %>
+    </div>
+    <div>
+      <%= form.hidden_field :author_id, required: true, value: current_user.id %>
+    </div>
+    <div class="field">
+      <%= form.label :category %>
+      <%= form.select :groupe_id, @groups.collect { |category| [category.name, category.id] }, {selected: params['id']}, class: "form-select texto"%>
+    </div>
+    <div class="actions">
+      <%= form.submit 'Create Transaction', class: 'form-submit-comment' %> 
+    </div>
+  <% end %>
+</div>

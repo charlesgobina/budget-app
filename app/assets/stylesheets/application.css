@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 header {
@@ -12,8 +15,15 @@ header {
   align-items: center;
   padding: 0 20px;
   height: 60px;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: #3571b9;
+  color: #fff;
+  font-size: 14px;
+}
+
+header > img {
+  width: 30px;
+  height: 30px;
+  color: white;
 }
 
 nav {
@@ -21,12 +31,14 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 40px;
   padding: 10px 10px;
   text-align: center;
   width: 100%;
   position: absolute;
-  background-color: aqua;
+  background-image: repeating-linear-gradient(to bottom, #3082be, #3082be);
+  opacity: 1;
+  z-index: 1;
   top: -100%;
   height: 100vh;
   transition: top 0.8s cubic-bezier(0.22, 1, 0.36, 1);
@@ -42,8 +54,31 @@ nav > figure > img {
   border-radius: 50%;
 }
 
+nav > figure > h4 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
 nav > .take-nav {
   align-self: flex-end;
+  color: #bf0a30;
+  font-weight: 700;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+nav > ul > li > a {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav > form > .leave {
@@ -57,4 +92,279 @@ nav > form > .leave {
 
 .notice {
   color: rgb(15, 189, 15);
+  text-align: center;
+}
+
+.alert {
+  color: rgb(255, 34, 34);
+  text-align: center;
+}
+
+.group-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: #f1f3f2;
+}
+
+.group-wrapper > .no-trans {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #999;
+  font-weight: bold;
+}
+
+.group-wrapper > a {
+  padding: 10px;
+  background-color: #fff;
+  color: #ababab;
+}
+
+.group-wrapper > .group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  background-color: #474747;
+}
+
+.group-container > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ent-amount {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.group-container > li > figure {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.group-container > li > .group-amount {
+  color: #000;
+}
+
+.group-container > li > figure > figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.group-container > li > figure > figcaption > h3 {
+  font-weight: bolder;
+}
+
+.group-container > li > figure > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.group-wrapper > .a-link {
+  padding: 20px 20px;
+  border: none;
+  background-color: #60b524;
+  outline: none;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.authenticate > a {
+  width: 100%;
+  align-self: center;
+}
+
+.group-wrapper > .a-link > a {
+  border: 1px solid #fff;
+  padding: 10px 0;
+}
+
+.group-wrapper > .a-link > a > button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+}
+
+.group-wrapper > .transaction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  background-color: #fff;
+  color: #999;
+  border-radius: 5px;
+}
+
+.transaction-container > li > figure {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+.total-pay > p {
+  text-transform: uppercase;
+}
+
+.transaction-container > li > p {
+  text-align: justify;
+  padding: 10px 0;
+}
+
+.transaction-container > li > figure > figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #000;
+}
+
+.transaction-container > li > figure > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.total-pay {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+  border-top: 1px solid #999;
+  padding: 10px 0;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.total-trans {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+  border-top: 1px solid #999;
+  padding: 10px 0;
+  color: #000;
+}
+
+.total-trans > .date {
+  color: #999;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.auth-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  height: 100vh;
+}
+
+.authenticate {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.authenticate > a > .auth-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.authenticate > a > .login-btn {
+  background-color: #3571b9;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.authenticate > a > .sign-btn {
+  background-color: #fff;
+  color: #3571b9;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+form > .field > .texto {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  height: 40px;
+  background-color: #f1f3f2;
+  padding: 0 5px;
+}
+
+form > .actions {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+form > .actions > input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #60b524;
+  color: #fff;
+}
+
+.shared-links {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  font-size: small;
 }

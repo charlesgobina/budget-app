@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="auth-wrapper">
+    <figure>
+      <%= image_tag("logo.png", class: "animate__animated animate__zoomInDown animate__slow") %>
+    </figure>
+    <div class="authenticate">
+      <%= link_to(new_user_session_path) do %>
+        <button class="auth-btn login-btn">Log in</button>
+      <% end %>
+      <%= link_to(new_user_registration_path) do %>
+        <button class="auth-btn sign-btn">Sign up</button>
+      <% end %>      
+    </div>
+  </div>
+</div>

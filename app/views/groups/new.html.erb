@@ -1,18 +1,21 @@
-<h1>Category/Group#New</h1>
+<%= render "shared/headershow", back: "back", title: "NEW CATEGORY", image: "search" %>
+<%= render "shared/msg" %>
 
-<div class="post-new">
-  <%= form_with model: @post, url: "/users/#{current_user.id}/posts" do |form| %>
+<div class="group-new">
+  <%= form_with model: @group, url: groups_path do |form| %>
+    <div class="form-new-title field">
+      <%= form.label :name %>
+      <%= form.text_field :name, required: true, class: 'new-title texto' %>
+    </div>
+    <div class="form-new-post field">
+      <%= form.label :icon %>
+      <%= form.text_field :icon, required: true, class: 'texto' %>
+    </div>
     <div>
       <%= form.hidden_field :author_id, value: current_user.id %>
     </div>
-    <div class="form-new-title">
-      <%= form.label :title %>
-      <%= form.text_field :title, class: 'new-title' %>
+    <div class="actions">
+      <%= form.submit class: 'form-submit-comment' %>  
     </div>
-    <div class="form-new-post">
-      <%= form.label :text %>
-      <%= form.text_area :text, size: '90x20' %>
-    </div>
-    <%= form.submit class: 'form-submit-comment' %>
   <% end %>
 </div>
