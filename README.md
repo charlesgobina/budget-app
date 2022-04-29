@@ -39,6 +39,10 @@ bundle install
 rails s
 ```
 
+## Run Tests
+* To run the test, replace `ENV.fetch('RAILS_ENV', nil) ||= 'test'` in `spec/rails_helper` with `ENV['RAILS_ENV'] ||= 'test'`
+* Next, go to the terminal and type the command `rspec spec`
+
 ## Authors
 Charles Gobina :student: 
 * Github:https://github.com/charlesgobina 
