@@ -7,6 +7,12 @@
 * Git
 * Gitflow
 
+## Presentation
+[Presentation Video](https://www.loom.com/share/de0ac97099b642e9a637de2067739bea)
+
+## Live Demo
+[Live Demo](https://budget-appl.herokuapp.com/)
+
 ## Software Requirements
 * Node.JS
 * Ruby
