@@ -16,7 +16,7 @@
       </p>
       <div class="total-trans">
         <span>Transaction <%= "N°#{rand 1000000000..9000000000}" %> </span>
-        <span class="date"><%= "Date: #{@entity.created_at.to_date.to_s} at #{@entity.created_at.to_s(:time)} "%></span>
+        <span class="date"><%= "Date: #{@entity.created_at.to_date.to_fs} at #{@entity.created_at.to_fs(:time)} "%></span>
       </div>
       <div class="total-pay">
         <p>Total payment<p>
