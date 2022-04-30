@@ -1,0 +1,39 @@
+<%= render "shared/headershow", back: "back.png", title: "SIGN UP", image: "search.svg" %>
+<%= render "shared/msg" %>
+
+<%= form_for(resource, as: resource_name, html: {'data-turbo' => "false"}, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "texto", autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "texto", autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, class: "texto", autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: "texto", autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+  <div class="shared-links">
+    <%= render "devise/shared/links" %>
+  </div>
+
+

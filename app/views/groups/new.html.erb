@@ -1,0 +1,21 @@
+<%= render "shared/headershow", back: "back.png", title: "NEW CATEGORY", image: "search.svg" %>
+<%= render "shared/msg" %>
+
+<div class="group-new">
+  <%= form_with model: @group, url: groups_path do |form| %>
+    <div class="form-new-title field">
+      <%= form.label :name %>
+      <%= form.text_field :name, required: true, class: 'new-title texto' %>
+    </div>
+    <div class="form-new-post field">
+      <%= form.label :icon %>
+      <%= form.text_field :icon, required: true, class: 'texto' %>
+    </div>
+    <div>
+      <%= form.hidden_field :author_id, value: current_user.id %>
+    </div>
+    <div class="actions">
+      <%= form.submit class: 'form-submit-comment' %>  
+    </div>
+  <% end %>
+</div>
