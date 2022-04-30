@@ -25,8 +25,9 @@
       <% end %>
     <% end %>
   <% end %>
-  <div class="a-link">
-    <%= link_to(new_group_path) do %>
+  <div class="a-link cat-leave">
+    <%= button_to('Leave', destroy_user_session_path, method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, class: "leave grp-leave") %>
+    <%= link_to(new_group_path, class: 'new-grp') do %>
       <button type="button">New Category</button>
     <% end %>
   </div>

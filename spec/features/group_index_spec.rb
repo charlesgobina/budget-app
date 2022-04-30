@@ -21,7 +21,7 @@ describe 'group index page', type: :feature do
     end
 
     it 'should have dev group' do
-      expect(page).to have_content('Dev group')
+      expect(page).to have_text('Dev group')
     end
 
     it 'should have button new category' do

@@ -176,7 +176,7 @@ nav > form > .leave {
 .group-wrapper > .a-link {
   padding: 20px 20px;
   border: none;
-  background-color: #60b524;
+  background-color: #3082be;
   outline: none;
   width: 100%;
   text-align: center;
@@ -367,4 +367,33 @@ form > .actions > input[type="submit"] {
   flex-direction: column;
   padding: 0 20px;
   font-size: small;
+}
+
+.cat-leave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grp-leave {
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(255, 1, 1);
+  text-transform: uppercase;
+  font-weight: bolder;
+  height: 50px;
+}
+
+.a-link > .new-grp {
+  background-color: #60b524;
+}
+
+.a-link > #new-grp {
+  background-color: #60b524;
 }
